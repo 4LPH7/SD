@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Debris Tracker</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.114/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.114/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    
+    <div id="loadingIndicator">
+        <div class="spinner"></div>
+        <p>Fetching Debris Data...</p>
+    </div>
+    
+    <div id="tooltip"></div>
+
+    <div id="infoCard" class="card-hidden">
+        <div class="card-header">
+            <h3 id="infoName">Debris Name</h3>
+            <button id="closeButton">&times;</button>
+        </div>
+        <div class="card-content">
+            <p><strong>NORAD ID:</strong> <span id="infoNorad">N/A</span></p>
+            <p><strong>Speed:</strong> <span id="infoSpeed">N/A</span> km/s</p>
+            <p><strong>Altitude:</strong> <span id="infoAltitude">N/A</span> km</p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
